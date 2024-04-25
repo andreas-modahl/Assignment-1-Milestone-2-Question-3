@@ -1,6 +1,7 @@
 //Game Score
 let score = 0;
 
+
 //Cloud Object
 let cloud = {
   variations: new Array(2),
@@ -36,14 +37,14 @@ let bird = {
 function preload() {
   // Preload clouds
   for (let i = 0; i < cloud.variations.length; i++) {
-    cloud.variations[i] = loadImage("images/" + i + ".png");
+    cloud.variations[i] = loadImage("src/images/" + i + ".png");
   }
   // Preload birds
   for (let i = 0; i < bird.variations.length; i++) {
-    bird.variations[i] = loadImage("images/bird" + i + ".png");
+    bird.variations[i] = loadImage("src/images/bird" + i + ".png");
   }
   // Preload airplane
-  plane.airplane = loadImage("images/airplane.png");
+  plane.airplane = loadImage("src/images/airplane.png");
 }
 
 function setup() {
@@ -175,7 +176,7 @@ function drawClouds() {
   }
 }
 //Function that draws the birds passing by
-function birdIsTheWord(){
+function birdIsTheWord() {
   bird.counter++;
   for (i = 0; i < bird.flockSize.length; i++) {
     if (bird.counter > 10) {
